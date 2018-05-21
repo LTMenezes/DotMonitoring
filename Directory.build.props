@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<PropertyGroup>
+	
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		
+		<PackageId>$(AssemblyName)</PackageId>
+		<PackageReleaseNotes>https://github.com/LTMenezes/DotMonitoring/CHANGELOG.md</PackageReleaseNotes>
+		<PackageProjectUrl>https://github.com/LTMenezes/DotMonitoring</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/LTMenezes/DotMonitoring/License</PackageLicenseUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/LTMenezes/DotMonitoring</RepositoryUrl>
+		
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>embedded</DebugType>
+		<DefaultLanguage>en-US</DefaultLanguage>
+		<IncludeSymbols>false</IncludeSymbols>
+		<xUnitVersion>2.3.0-beta5-build3769</xUnitVersion>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,124 @@
+﻿<!doctype html>
+
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Content-Language" content="en" />
+
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#4188c9">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<title>DotMonitoring</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+<script src="/monitoring/assets/js/require.min.js"></script>
+
+
+<!-- Dashboard Core -->
+<link href="/monitoring/assets/css/dashboard.css" rel="stylesheet" />
+<script src="/monitoring/assets/js/dashboard.js"></script>
+
+</head>
+<body class="">
+
+	<div class="page">
+
+		<div class="page-main">
+
+			<div class="header py-4">
+				<div class="container">
+					<div class="d-flex">
+						<a class="header-brand">
+							<img src="/monitoring/assets/brand/logo.svg" class="header-brand-img" alt="logo">
+						</a>
+
+						<div class="d-flex order-lg-2 ml-auto">
+							<div class="nav-item d-none d-md-flex">
+								<a href="/monitoring/data.json" class="btn btn-sm btn-outline-primary" target="_blank">Get data as json</a>
+							</div>			
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="my-3 my-md-5">
+				<div class="container">
+					<div class="page-header">
+						<h1 class="page-title">DotMonitoring Data</h1>
+					</div>
+
+					<div class="row row-cards">
+						<div class="col-lg-6 col-xl-6" >
+							<div class="card" >
+								<div class="card-header">
+									<h3 class="card-title">Requests</h3>
+								</div>
+								<div class="card-body" >
+									<canvas id="RequestsChart" ></canvas> 
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-lg-6 col-xl-6">
+							<div class="card">
+								<div class="card-header">
+									<h3 class="card-title">VM Memory Usage</h3>
+								</div>
+								<div class="card-body">
+									<canvas id="VmMemoryUsageChart" ></canvas> 
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-header">
+									<h3 class="card-title">Number of Threads</h3>
+								</div>
+								<div class="card-body">
+									<canvas id="ThreadsChart" ></canvas> 
+								</div>
+							</div>
+						</div>
+
+						<div class="card col-lg-6 col-xl-4">
+							<div class="card-body text-center">
+								<div class="h5">Total Uptime</div>
+								<div id="UptimeDisplay" class="display-4 font-weight-bold mb-4"></div>
+								<div class="display-4 font-weight-bold mb-4">Seconds</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-header">
+									<h3 class="card-title">Allocated Physical Memory</h3>
+								</div>
+								<div class="card-body">
+									<canvas id="WorkingSetChart" ></canvas> 
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="/monitoring/plot-charts.js"></script>
+
+</body>
+</html>

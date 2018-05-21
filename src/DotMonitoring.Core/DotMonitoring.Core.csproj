@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="WebInterfaceFiles\assets\plugins\**" />
+    <EmbeddedResource Remove="WebInterfaceFiles\assets\plugins\**" />
+    <None Remove="WebInterfaceFiles\assets\plugins\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="WebInterfaceFiles\assets\brand\logo.svg" />
+    <None Remove="WebInterfaceFiles\assets\css\dashboard.css" />
+    <None Remove="WebInterfaceFiles\assets\css\dashboard.rtl.css" />
+    <None Remove="WebInterfaceFiles\assets\js\core.js" />
+    <None Remove="WebInterfaceFiles\assets\js\dashboard.js" />
+    <None Remove="WebInterfaceFiles\assets\js\require.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\bootstrap.bundle.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\chart.bundle.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\circle-progress.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery-3.2.1.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery-3.2.1.slim.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery-jvectormap-2.0.3.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery-jvectormap-de-merc.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery-jvectormap-world-mill.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery.sparkline.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\jquery.tablesorter.min.js" />
+    <None Remove="WebInterfaceFiles\assets\js\vendors\selectize.min.js" />
+    <None Remove="WebInterfaceFiles\index.html" />
+    <None Remove="WebInterfaceFiles\plot-charts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="WebInterfaceFiles\assets\brand\logo.svg" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\css\dashboard.css" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\css\dashboard.rtl.css" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\core.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\dashboard.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\require.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\bootstrap.bundle.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\chart.bundle.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\circle-progress.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery-3.2.1.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery-3.2.1.slim.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery-jvectormap-2.0.3.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery-jvectormap-de-merc.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery-jvectormap-world-mill.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery.sparkline.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\jquery.tablesorter.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\assets\js\vendors\selectize.min.js" />
+    <EmbeddedResource Include="WebInterfaceFiles\index.html" />
+    <EmbeddedResource Include="WebInterfaceFiles\plot-charts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.0.2\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.dependencyinjection.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\10.0.1\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
