@@ -1,6 +1,7 @@
 ﻿using DotMonitoring.Core.Models;
 using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace DotMonitoring.Core.Monitors
@@ -18,13 +19,18 @@ namespace DotMonitoring.Core.Monitors
         {
             Process currentProcess = Process.GetCurrentProcess();
 
-            long peakVmMemory = currentProcess.PeakVirtualMemorySize64;
-            long vmMemory = currentProcess.PagedMemorySize64;
-            int numberOfThreads = currentProcess.Threads.Count;
-            double TotalUptimeInSeconds = (DateTime.Now - currentProcess.StartTime).TotalSeconds;
-            long workingSet = currentProcess.WorkingSet64;
+            ProcessData processData = new ProcessData()
+            {
+                Architecture = RuntimeInformation.ProcessArchitecture.ToString(),
+                OsDescription = RuntimeInformation.OSDescription,
+                MachineName = currentProcess.MachineName,
+                NumberOfThreads = currentProcess.Threads.Count,
+                TotalUptimeInSeconds = (DateTime.Now - currentProcess.StartTime).TotalSeconds,
+                WorkingSet = currentProcess.WorkingSet64,
+                PagedMemorySize = currentProcess.PagedMemorySize64,
+                VirtualMemorySize = currentProcess.VirtualMemorySize64
+            };
 
-            ProcessData processData = new ProcessData(peakVmMemory, vmMemory, numberOfThreads, TotalUptimeInSeconds, workingSet);
             this._monitoringData.ProcessData.Add(processData);
         }
 

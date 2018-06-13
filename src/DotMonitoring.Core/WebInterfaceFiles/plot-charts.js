@@ -46,12 +46,12 @@ window.onload = function startChart() {
         }
     });
 
-    var vmmchart = document.getElementById("VmMemoryUsageChart").getContext('2d');
-    window.vmmChart = new Chart(vmmchart, {
+    var vmschart = document.getElementById("VmMemorySizeChart").getContext('2d');
+    window.vmsChart = new Chart(vmschart, {
         type: 'line',
         data: {
             datasets: [{
-                label: 'Virtual Machine Used Memory',
+                label: 'Virtual Memory Size',
                 data: [],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -143,7 +143,7 @@ window.onload = function startChart() {
         type: 'line',
         data: {
             datasets: [{
-                label: 'Allocated Physical Memory',
+                label: 'Working Set',
                 data: [],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -257,10 +257,10 @@ function UpdateVMMemoryData(ProcessData){
             return;
         }
 
-        window.vmmChart.data.datasets[0].data.push({x: new Date(element.Timestamp), y: element.VirtualMachineMemory, Timestamp: element.Timestamp})
+        window.vmsChart.data.datasets[0].data.push({ x: new Date(element.Timestamp), y: element.VirtualMemorySize, Timestamp: element.Timestamp})
     });
 
-    window.vmmChart.update();
+    window.vmsChart.update();
 }
 
 function UpdateNThreadsData(ProcessData){
@@ -297,7 +297,7 @@ function UpdateUptime(){
 
 function EvictOldData(){
     EvictOldDataFromChart(window.requestsChart);
-    EvictOldDataFromChart(window.vmmChart);
+    EvictOldDataFromChart(window.vmsChart);
     EvictOldDataFromChart(window.tChart);
     EvictOldDataFromChart(window.wschart);
 }

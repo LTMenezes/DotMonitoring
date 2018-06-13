@@ -36,26 +36,22 @@
 
 			<div class="header py-4">
 				<div class="container">
-					<div class="d-flex">
-						<a class="header-brand">
-							<img src="/monitoring/assets/brand/logo.svg" class="header-brand-img" alt="logo">
-						</a>
+                    <div class="d-flex">
+                        <a class="header-brand">
+                            <img src="/monitoring/assets/brand/logo.svg" class="header-brand-img" alt="logo">
+                        </a>
 
-						<div class="d-flex order-lg-2 ml-auto">
-							<div class="nav-item d-none d-md-flex">
-								<a href="/monitoring/data.json" class="btn btn-sm btn-outline-primary" target="_blank">Get data as json</a>
-							</div>			
-						</div>
-					</div>
+                        <div class="d-flex order-lg-2 ml-auto">
+                            <div class="nav-item d-none d-md-flex">
+                                <a href="/monitoring/data.json" class="btn btn-sm btn-outline-primary" target="_blank">Get data as json</a>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
 
 			<div class="my-3 my-md-5">
 				<div class="container">
-					<div class="page-header">
-						<h1 class="page-title">DotMonitoring Data</h1>
-					</div>
-
 					<div class="row row-cards">
 						<div class="col-lg-6 col-xl-6" >
 							<div class="card" >
@@ -71,10 +67,10 @@
 						<div class="col-lg-6 col-xl-6">
 							<div class="card">
 								<div class="card-header">
-									<h3 class="card-title">VM Memory Usage</h3>
+									<h3 class="card-title">Virtual Memory Size</h3>
 								</div>
 								<div class="card-body">
-									<canvas id="VmMemoryUsageChart" ></canvas> 
+									<canvas id="VmMemorySizeChart" ></canvas> 
 								</div>
 							</div>
 						</div>
@@ -101,7 +97,7 @@
 						<div class="col-lg-6 col-xl-4">
 							<div class="card">
 								<div class="card-header">
-									<h3 class="card-title">Allocated Physical Memory</h3>
+									<h3 class="card-title">Working Set</h3>
 								</div>
 								<div class="card-body">
 									<canvas id="WorkingSetChart" ></canvas> 
