@@ -2,7 +2,7 @@
 
 A simple, lightweight webserver monitor for .net core applications.
 
-![Alt Text](/docs/dashboard.gif)
+![Alt Text](/docs/dashboard-ui.gif)
 
 DotMonitoring gives you two endpoints '/monitoring' for the dashboard UI and '/monitoring/data.json' for a json file with information about the webserver, making it easier to integrate DotMonitoring with existing monitoring applications and avoiding any kind of vendor lock-in.
 
