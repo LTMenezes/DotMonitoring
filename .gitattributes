@@ -49,3 +49,5 @@
 *.fsproj -text merge=union 
 *.dbproj -text merge=union 
 *.sln -text merge=union 
+
+src/DotMonitoring.Core/WebInterfaceFiles/* linguist-vendored
